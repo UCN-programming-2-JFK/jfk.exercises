@@ -28,8 +28,7 @@ public class BoardFrame extends JFrame {
 
 	private static void solve() {
 		// add code to solve the 8 queens problem,
-		// and add solution to MazePanel to show it
-		// example code below...
+		// and add solution (queen placement) to "board" to show it
 
 		// example solution visualization - delete this when you have your solution
 		board.setHasQueen(1, 5);
