@@ -18,8 +18,8 @@ public class BoardPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	private int tileSize;
 	private Board board;
-	private static Color brown = new Color(165,82,42);
-	private static Color lightBrown = new Color(222,184,135);
+	private static Color brown = new Color(165, 82, 42);
+	private static Color lightBrown = new Color(222, 184, 135);
 	private BufferedImage queen;
 
 	public BoardPanel(int tileSizeInPixels) {
@@ -35,20 +35,22 @@ public class BoardPanel extends JPanel {
 	}
 
 	private void drawBoard(Graphics g) {
-		 RenderingHints rh = new RenderingHints(
-	             RenderingHints.KEY_TEXT_ANTIALIASING,
-	             RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
-		 ((Graphics2D)g).setRenderingHints(rh);
+		//smooth the graphics (edges) for drawing images
+		RenderingHints rh = new RenderingHints(RenderingHints.KEY_TEXT_ANTIALIASING,
+				RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
+		((Graphics2D) g).setRenderingHints(rh);
 		for (int y = 0; y < board.getRows(); y++) {
 			for (int x = 0; x < board.getColumns(); x++) {
-				drawTile(g, x, y , (x+y)%2==0 ? brown : lightBrown);
-				if(board.getTile(x,y)) {
-					g.drawImage(queen, x* tileSize, y*tileSize, tileSize, tileSize, null);
+				//draw the tile background
+				drawTile(g, x, y, (x + y) % 2 == 0 ? brown : lightBrown);
+				if (board.getHasQueen(x, y)) {
+					//draw the queen if there is one
+					g.drawImage(queen, x * tileSize, y * tileSize, tileSize, tileSize, null);
 				}
 			}
 		}
 	}
-	
+
 	private void drawTile(Graphics g, int column, int row, Color color) {
 		g.setColor(color);
 		g.fillRect(column * getTileSize(), row * getTileSize(), getTileSize(), getTileSize());
@@ -69,7 +71,7 @@ public class BoardPanel extends JPanel {
 	public void setBoard(Board board) {
 		this.board = board;
 	}
-	
+
 	private BufferedImage loadImage(String imagePathOrUrl) {
 		BufferedImage image = null;
 		try {

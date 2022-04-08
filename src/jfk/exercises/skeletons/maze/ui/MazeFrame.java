@@ -10,7 +10,7 @@ public class MazeFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private static MazePanel panel;
-	private static int columns = 25, rows = 25, tileSizeInPixels = 40;
+	private static int columns = 19, rows = 19, tileSizeInPixels = 32;
 	private static Maze maze;
 
 	public static void main(String[] args) {

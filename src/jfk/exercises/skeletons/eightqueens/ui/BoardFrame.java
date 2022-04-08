@@ -11,9 +11,8 @@ public class BoardFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private static BoardPanel panel;
-	private static int tileSizeInPixels = 100;
+	private static int tileSizeInPixels = 64;
 	private static Board board = new Board();
-
 
 	public static void main(String[] args) {
 
@@ -27,15 +26,16 @@ public class BoardFrame extends JFrame {
 		panel.repaint();
 	}
 
-private static void solve() {
-	// add code to solve maze, and add solution to MazePanel to show it
-	//example code below...
-	board.setTile(1, 5, true); 
-	board.setTile(3, 1, true);
-	board.setTile(7, 4, true);
-	//example solution visualization - delete this when you have your solution
-	
-}
+	private static void solve() {
+		// add code to solve the 8 queens problem,
+		// and add solution to MazePanel to show it
+		// example code below...
+
+		// example solution visualization - delete this when you have your solution
+		board.setHasQueen(1, 5);
+		board.setHasQueen(3, 1);
+		board.setHasQueen(7, 4);
+	}
 
 	public BoardFrame() {
 		getRootPane().setLayout(new BorderLayout());

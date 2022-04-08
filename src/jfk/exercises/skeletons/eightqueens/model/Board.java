@@ -26,24 +26,28 @@ public class Board implements Iterable<Point> {
 
 	public void clear() {
 		for (Point tile : this) {
-			setTile(tile, false);
+			setHasQueen(tile, false);
 		}
 	}
 
-	public void setTile(int column, int row, boolean blocked) {
-		getTiles()[column][row] = blocked;
+	public void setHasQueen(int column, int row, boolean hasQueen) {
+		getTiles()[column][row] = hasQueen;
+	}
+	
+	public void setHasQueen(int column, int row) {
+		setHasQueen(column, row, true);
 	}
 
-	public boolean getTile(int column, int row) {
+	public boolean getHasQueen(int column, int row) {
 		return getTiles()[column][row];
 	}
 	
-	public boolean getTile(Point point) {
+	public boolean getHasQueen(Point point) {
 		return getTiles()[point.x][point.y];
 	}
 
-	public void setTile(Point tile, boolean blocked) {
-		setTile(tile.x, tile.y, blocked);
+	public void setHasQueen(Point tile, boolean blocked) {
+		setHasQueen(tile.x, tile.y, blocked);
 	}
 
 	@Override
