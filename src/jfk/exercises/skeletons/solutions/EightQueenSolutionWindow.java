@@ -10,7 +10,7 @@ import javax.swing.plaf.basic.BasicSplitPaneUI.KeyboardDownRightHandler;
 import jfk.exercises.skeletons.eightqueens.model.Board;
 import jfk.exercises.skeletons.eightqueens.ui.BoardFrame;
 
-public class EightQueenSolution extends BoardFrame {
+public class EightQueenSolutionWindow extends BoardFrame {
 	private List<Point> diagonalDirections = Arrays.asList(new Point(-1, -1), new Point(1, -1), new Point(-1, 1),
 			new Point(1, 1));
 	private static final long serialVersionUID = 1L;

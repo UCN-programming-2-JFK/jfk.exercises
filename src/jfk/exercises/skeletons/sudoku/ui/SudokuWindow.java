@@ -2,7 +2,7 @@ package jfk.exercises.skeletons.sudoku.ui;
 
 import javax.swing.*;
 
-import jfk.exercises.skeletons.solutions.SudokuSolution;
+import jfk.exercises.skeletons.solutions.SudokuSolutionWindow;
 import jfk.exercises.skeletons.sudoku.model.Sudoku;
 
 public class SudokuWindow extends JFrame {
@@ -14,7 +14,7 @@ public class SudokuWindow extends JFrame {
 
 	public static void main(String[] args) {
 		//window = new SudokuWindow();
-		window = new SudokuSolution();
+		window = new SudokuSolutionWindow();
 		window.setTitle("JSudoku solver");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 

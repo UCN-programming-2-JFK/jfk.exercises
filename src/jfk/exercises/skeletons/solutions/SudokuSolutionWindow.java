@@ -11,7 +11,7 @@ import jfk.exercises.skeletons.eightqueens.model.Board;
 import jfk.exercises.skeletons.eightqueens.ui.BoardFrame;
 import jfk.exercises.skeletons.sudoku.ui.SudokuWindow;
 
-public class SudokuSolution extends SudokuWindow {
+public class SudokuSolutionWindow extends SudokuWindow {
 	private List<Point> diagonalDirections = Arrays.asList(new Point(-1, -1), new Point(1, -1), new Point(-1, 1),
 			new Point(1, 1));
 	private static final long serialVersionUID = 1L;

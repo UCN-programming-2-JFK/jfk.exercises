@@ -6,7 +6,7 @@ import javax.swing.*;
 import jfk.exercises.skeletons.eightqueens.model.Board;
 import jfk.exercises.skeletons.maze.model.Maze;
 import jfk.exercises.skeletons.maze.tools.MazeCreator;
-import jfk.exercises.skeletons.solutions.EightQueenSolution;
+import jfk.exercises.skeletons.solutions.EightQueenSolutionWindow;
 
 public class BoardFrame extends JFrame {
 
@@ -18,7 +18,7 @@ public class BoardFrame extends JFrame {
 	public static void main(String[] args) {
 
 		//BoardFrame window = new BoardFrame();
-		BoardFrame window = new EightQueenSolution();
+		BoardFrame window = new EightQueenSolutionWindow();
 		window.setTitle("8 Queens problem solver");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		window.pack();
