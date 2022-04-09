@@ -30,7 +30,7 @@ public class EightQueenSolution extends BoardFrame {
 		}
 
 		// if out of possible steps return false;
-		if (valueIndex == 63) {
+		if (valueIndex == 64) {
 			return false;
 		}
 

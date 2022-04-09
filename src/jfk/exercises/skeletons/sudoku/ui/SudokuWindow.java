@@ -2,32 +2,34 @@ package jfk.exercises.skeletons.sudoku.ui;
 
 import javax.swing.*;
 
+import jfk.exercises.skeletons.solutions.SudokuSolution;
 import jfk.exercises.skeletons.sudoku.model.Sudoku;
 
 public class SudokuWindow extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private static SudokuWindow window;
-	private static Sudoku sudoku = new Sudoku();
+	protected Sudoku sudoku = new Sudoku();
 	private static SudokuPanel panel = new SudokuPanel();
 
 	public static void main(String[] args) {
-		window = new SudokuWindow();
+		//window = new SudokuWindow();
+		window = new SudokuSolution();
 		window.setTitle("JSudoku solver");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-		panel.setSudoku(sudoku);
+		panel.setSudoku(window.sudoku);
 		window.add(panel);
 
 		window.setVisible(true);
 		window.setResizable(false);
 		window.pack();
 
-		solve();
+		window.solve();
 		panel.repaint();
 	}
 
-	private static void solve() {
+	protected void solve() {
 
 		// add your sudoku solving algorithm here
 
