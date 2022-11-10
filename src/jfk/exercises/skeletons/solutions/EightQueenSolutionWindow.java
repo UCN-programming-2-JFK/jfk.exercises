@@ -37,7 +37,7 @@ public class EightQueenSolutionWindow extends BoardFrame {
 		int x = valueIndex % board.getColumns();
 		int y = valueIndex / board.getRows();
 
-		// for each possible value v at this step
+		// for each possible value v at this step (with and without queen on this tile)
 		System.out.println("Index:" + valueIndex + " - trying WITH a queen at x:" + x + ", y:" + y + "");
 		board.setHasQueen(x, y);
 

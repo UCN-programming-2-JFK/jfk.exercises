@@ -17,8 +17,11 @@ public class BoardFrame extends JFrame {
 
 	public static void main(String[] args) {
 
-		//BoardFrame window = new BoardFrame();
-		BoardFrame window = new EightQueenSolutionWindow();
+		BoardFrame window = new BoardFrame();
+		
+		//uncomment the line below to see a possible solution
+		//BoardFrame window = new EightQueenSolutionWindow();
+		
 		window.setTitle("8 Queens problem solver");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		window.pack();

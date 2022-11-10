@@ -27,12 +27,14 @@ public class MazeFrameSolutionWindow extends MazeFrame {
 		}
 		
 		solutionSoFar.push(tileToTry);
+		
 		// if solution with stepToTry return true;
 		if (tileToTry.equals(maze.getEndPoint())) {return true;}
 
 		// if out of possible steps return false
-		List<Point> validUntriedNeighbors =	getValidUntriedNeighbors(tileToTry);
-		
+		List<Point> validUntriedNeighbors =	getValidUntriedNeighbors(tileToTry);		
+
+		if(validUntriedNeighbors.size() == 0) System.out.println(tileToTry + " is a dead end! :(");
 		// for each possible value v at this step
 		for(Point neighbor : validUntriedNeighbors) {
 			if(trySolve(neighbor)) {return true;}
@@ -43,14 +45,12 @@ public class MazeFrameSolutionWindow extends MazeFrame {
 
 	private List<Point> getValidUntriedNeighbors(Point tileToTry) {
 		//get all neighbors up, down, left, right
-		List<Point> neighbors = MazeTool.get4NeighborsNSEW(tileToTry);
+		List<Point> neighbors = MazeTool.getOpenNeighborTilesWithinMazeBorder(maze, tileToTry);
 
-		//remove potential neighbors on border or outside maze
-		MazeTool.removeBorderTilesAndTilesOutsideMaze(maze.getTiles(), neighbors);
-		//remove all neigbors that are in the solution so far or are walls
+		//remove all neigbors that have already been tried (are already in current solution) 
 		for(int tileCounter = neighbors.size()-1; tileCounter >= 0; tileCounter--) {
 			Point neighbor = neighbors.get(tileCounter);
-			if(solutionSoFar.contains(neighbor) || maze.getTile(neighbor)) {
+			if(solutionSoFar.contains(neighbor)) {
 				neighbors.remove(tileCounter);
 			}
 		}

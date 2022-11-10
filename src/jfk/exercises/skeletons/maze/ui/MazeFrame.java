@@ -17,8 +17,11 @@ public class MazeFrame extends JFrame {
 
 	public static void main(String[] args) {
 
-		// window = new MazeFrame();
-		window = new MazeFrameSolutionWindow();
+		window = new MazeFrame();
+		
+		//uncomment the line below to see a possible solution
+		//window = new MazeFrameSolutionWindow();
+		
 		window.setTitle("Maze visualizer");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		window.pack();

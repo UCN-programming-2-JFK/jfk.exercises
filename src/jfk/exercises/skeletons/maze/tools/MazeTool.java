@@ -171,11 +171,23 @@ public class MazeTool {
 			pointToCheck.translate(movement.x, movement.y);
 		}
 		
-		
 		return tilesBetween;
 	}
 	
 	public static boolean isDeadEnd(Maze maze, Point pointToCheck) {
 		return !maze.getTile(pointToCheck.x, pointToCheck.y) && numberOfFilled(maze, get4NeighborsNSEW(pointToCheck))==3;
+	}
+	
+	public static List<Point> getOpenNeighborTilesWithinMazeBorder(Maze maze, Point pointToGetNeighborsFor){
+		
+		List<Point> neighbors = MazeTool.get4NeighborsNSEW(pointToGetNeighborsFor);
+		MazeTool.removeBorderTilesAndTilesOutsideMaze(maze.getTiles(), neighbors);
+		for(int tileCounter = neighbors.size()-1; tileCounter >= 0; tileCounter--) {
+			Point neighbor = neighbors.get(tileCounter);
+			if(maze.getTile(neighbor)) {
+				neighbors.remove(tileCounter);
+			}
+		}
+		return neighbors;
 	}
 }

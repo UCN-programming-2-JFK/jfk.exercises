@@ -13,8 +13,12 @@ public class SudokuWindow extends JFrame {
 	private static SudokuPanel panel = new SudokuPanel();
 
 	public static void main(String[] args) {
-		//window = new SudokuWindow();
-		window = new SudokuSolutionWindow();
+		
+		window = new SudokuWindow();
+		
+		//uncomment the line below to see a possible solution
+		//window = new SudokuSolutionWindow();
+		
 		window.setTitle("JSudoku solver");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
