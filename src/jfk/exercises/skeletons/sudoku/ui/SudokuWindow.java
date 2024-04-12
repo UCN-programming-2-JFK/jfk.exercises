@@ -2,7 +2,7 @@ package jfk.exercises.skeletons.sudoku.ui;
 
 import javax.swing.*;
 
-import jfk.exercises.skeletons.solutions.SudokuSolutionWindow;
+import jfk.exercises.solutions.SudokuSolutionWindow;
 import jfk.exercises.skeletons.sudoku.model.Sudoku;
 
 public class SudokuWindow extends JFrame {

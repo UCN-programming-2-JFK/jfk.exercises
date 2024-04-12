@@ -5,7 +5,7 @@ import javax.swing.*;
 
 import jfk.exercises.skeletons.maze.model.Maze;
 import jfk.exercises.skeletons.maze.tools.MazeCreator;
-import jfk.exercises.skeletons.solutions.MazeFrameSolutionWindow;
+import jfk.exercises.solutions.MazeFrameSolutionWindow;
 
 public class MazeFrame extends JFrame {
 
@@ -20,7 +20,7 @@ public class MazeFrame extends JFrame {
 		window = new MazeFrame();
 		
 		//uncomment the line below to see a possible solution
-		//window = new MazeFrameSolutionWindow();
+		window = new MazeFrameSolutionWindow();
 		
 		window.setTitle("Maze visualizer");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
