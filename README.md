@@ -19,7 +19,7 @@ The JPanel visualizer can then be used to show the solution achieved using the b
 The solutions are implemented as subclasses of the respective JFrame subclasses, so 
 - [SudokuWindow.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/skeletons/sudoku/ui/SudokuWindow.java) has a [SudokuSolutionWindow.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/solutions/SudokuSolutionWindow.java) subclass 
 - [MazeFrame.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/skeletons/maze/ui/MazeFrame.java) has a [MazeFrameSolution.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/solutions/MazeFrameSolutionWindow.java) subclass 
-- [BoardFrame.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/skeletons/eightqueens/ui/BoardFrame.java) has a [MazeFrameSolution.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/solutions/EightQueenSolutionWindow.java) subclass 
+- [BoardFrame.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/skeletons/eightqueens/ui/BoardFrame.java) has a [EightQueenSolutionWindow.java](https://github.com/UCN-programming-2-JFK/jfk.exercises/blob/master/src/jfk/exercises/solutions/EightQueenSolutionWindow.java) subclass 
 
 ...all of which have an implementation of the `solve()` method.  
 ![image](https://user-images.githubusercontent.com/3811290/200328362-470976bf-8628-499a-ad1f-2b28a2f70a15.png)
