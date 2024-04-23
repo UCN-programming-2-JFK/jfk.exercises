@@ -20,7 +20,7 @@ public class MazeFrame extends JFrame {
 		window = new MazeFrame();
 		
 		//uncomment the line below to see a possible solution
-		window = new MazeFrameSolutionWindow();
+		//window = new MazeFrameSolutionWindow();
 		
 		window.setTitle("Maze visualizer");
 		window.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
